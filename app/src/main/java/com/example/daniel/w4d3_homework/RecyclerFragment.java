@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 
 /**
@@ -20,6 +21,8 @@ public class RecyclerFragment extends Fragment {
     private static final String TAG = "RecyclerFragmentTAG_";
     public static final String ARG_PAGE = "ARG_PAGE";
     private int myTab;
+
+    TextView fTxtView;
 
     public RecyclerFragment() {
         // Required empty public constructor
@@ -53,7 +56,9 @@ public class RecyclerFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+        //Here is were the fragment will be inflated
 
-
+        fTxtView = (TextView) getView().findViewById(R.id.f_txtView);
+        fTxtView.setText("Fragment #" + myTab);
     }
 }

@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ViewPager viewPager = (ViewPager) findViewById(R.id.m_cardView);
+        ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
         viewPager.setAdapter(new RecyclerFragmentAdapter(getSupportFragmentManager(),
                 MainActivity.this));
 
